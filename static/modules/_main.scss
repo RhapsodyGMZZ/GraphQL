@@ -1,0 +1,243 @@
+main {
+    height: 100%;
+    background-color: #0D0D0D;
+
+    #container {
+        &:has(form) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        &:has(#card-ratio) {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            justify-content: space-around;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+        // height: 100%;
+        // width: 100%;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 300px;
+            box-shadow: 0 0 15px #D94A4A;
+            padding: 4%;
+            border-radius: 15px;
+
+            #title {
+                height: 30px;
+                font-family: 'Open Sans';
+                font-weight: bolder;
+                color: #8C281F;
+                // transition: 300ms;
+                animation: neon 2s infinite alternate;
+                &:hover {
+                    color: #D94A4A;
+                    text-shadow: 0 0 10px #D94A4A;
+                }
+            }
+
+            @keyframes neon {
+                from {
+                    color: #8C281F;
+                }
+
+                10% {
+                    color: #D94A4A;
+                    text-shadow: 0 0 10px #D94A4A;
+                }
+
+                40% {
+                    color: #8C281F;
+                }
+
+                50% {
+                    color: #D94A4A;
+                    text-shadow: 0 0 10px #D94A4A;
+                }
+
+                60% {
+                    color: #8C281F;
+                }
+
+                80% {
+                    color: #D94A4A;
+                    text-shadow: 0 0 10px #D94A4A;
+                }
+
+                to {
+                    color: #8C281F;
+                }
+            }
+
+            #loginBlock {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 100%;
+
+                input {
+                    height: 25px;
+                    width: 250px;
+                    border-radius: 12px;
+                    border: thin;
+                    box-shadow: 0 0 3px rgb(255, 255, 255);
+                    text-align: center;
+                    background-color: #0D0D0D;
+                    color: #D94A4A;
+
+                    &::placeholder {
+                        color: white;
+                        font-weight: bold;
+                    }
+
+                }
+            }
+        }
+
+        // #background{
+        //     width: 100%;
+        //     height: 100%;
+        //     display: flex;
+        //     justify-content: center;
+        #card-xp {
+            position: fixed;
+            z-index: 1;
+            width: 800px;
+            height: 400px;
+            box-shadow: 0 0 10px #D94A4A;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            color: #D94A4A;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #30303037;
+            animation: modal ease-in-out 1s;
+
+            #xp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                height: 200px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: xx-large;
+                color: #D94A4A;
+
+                #xp-metric {
+                    color: #f2f2f2c7;
+                }
+            }
+
+            sub {
+                color: #8C281F;
+                font-size: 34px;
+            }
+
+            hr {
+                border-color: #D94A4A;
+                width: 100%;
+            }
+
+            #activities {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                height: 120px;
+                width: 100%;
+                align-self: flex-end;
+
+                .activity {
+                    color: #F2F2F2;
+                    text-decoration: none;
+                    width: 50%;
+                    transition: 200ms;
+
+                    &:hover {
+                        color: #D94A4A;
+                    }
+                }
+            }
+
+        }
+
+        // }
+
+
+        @keyframes modal {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        #card-ratio {
+            width: 700px;
+            height: 200px;
+            box-shadow: 0 0 10px #D94A4A;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            color: #D94A4A;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #30303037;
+
+            #ratio {
+                font-size: xx-large;
+            }
+        }
+
+        #card-xpGraph {
+            width: auto;
+            height: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px #D94A4A;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #30303037;
+            margin: 5%;
+
+            #title-xpGraph {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                font-size: xx-large;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bolder;
+                padding: 20px;
+                color: #D94A4A;
+
+                #subGraph {
+                    color: #f2f2f2c7;
+                }
+            }
+
+            hr {
+                width: 100%;
+                border-color: #f2f2f271;
+                margin-bottom: 2%;
+            }
+
+            #xpGraph {
+                border: solid #d94a4a5b;
+            }
+        }
+    }
+
+}

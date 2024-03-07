@@ -1,0 +1,10 @@
+@use './modules/main';
+@use './modules/header';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html,body{
+    margin: 0;
+    height: 100%;
+}
+

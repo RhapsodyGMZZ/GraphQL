@@ -1,0 +1,24 @@
+# Dossiers
+node_modules/
+dist/
+temp/
+build/
+# Fichiers
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Fichiers de sauvegarde
+*.bak
+*.swp
+*~
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers de cache
+.cache/

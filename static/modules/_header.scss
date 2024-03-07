@@ -1,0 +1,48 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #0d0d0d;
+    padding: 40px;
+    #navTitle{
+        font-size: 30px;
+        text-decoration: none;
+        color: #8C281F;
+        width: 30%;
+        transition: 300ms;
+        font-weight: bolder;
+        &:hover{
+            color: #D94A4A;
+            text-shadow: 0 0 10px #D94A4A;
+        }
+    }
+
+    #levelHeader{
+        border: #8C281F solid;
+        padding:30px;
+        color: #F2F2F2;
+        border-radius: 50%;
+        margin-right: 14%;
+        font-size: xx-large;
+        transition: 300ms;
+        &:hover{
+            background-color: #8c281f70;
+        }
+    }
+    
+    #logout{
+        background-color: #D94A4A;
+        height: 30px;
+        border: none;
+        border-radius: 13px;
+        width: 100px;
+        transition:400ms;
+        &:hover{
+            background-color:#d94a4a9f ;
+            box-shadow: 0 0 5px #D94A4A;
+            // transition: 300ms;
+        }
+    }
+}
+
